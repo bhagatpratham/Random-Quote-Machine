@@ -1,18 +1,14 @@
 import React from "react";
 
-const Quotes = () => {
+const Quotes = ({ handleClick, quote, author }) => {
   return (
     <div>
-      <div className='quote-box'>
-        <div className='quote-text'>
-          <span className='text'></span>
-        </div>
-        <div className='quote-author'>
-          <span className='author'></span>
-        </div>
-        <div className='buttons'>
-          <button className='button' id='new-quote'>
-            New Quote
+      <div className='quotes-container'>
+        <div id='quotes-box'>
+          <div id='text'>{quote}</div>
+          <div id='author'> {author}</div>
+          <button onClick={handleClick} id='new-quote'>
+            New quote
           </button>
         </div>
       </div>
